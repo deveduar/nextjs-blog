@@ -12,3 +12,24 @@
 .backToHome {
     margin: 3rem 0 0;
 }
+
+.profileContainer {
+  display: flex; /* Utilizar flexbox para el diseño */
+  align-items: center; /* Centrar verticalmente los elementos */
+
+}
+
+/* demomento aplicado a las paginas de posts */
+.profileImage {
+  margin-right: 5px; /* Espacio entre la imagen y el título */
+}
+.profileContainer a {
+  text-decoration: none; 
+  color: inherit; /* Utilizar el color de texto heredado */
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 48rem; /* Ajustar el tamaño del contenedor en pantallas más grandes */
+  }
+}

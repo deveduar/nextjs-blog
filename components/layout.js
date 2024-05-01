@@ -3,8 +3,9 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import React from "react";
 
-const name = "deveduar";
+const name = "@deveduar blog";
 export const siteTitle = "deveduar blog";
 
 // export default function Layout({ children }) {
@@ -41,20 +42,23 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}></Link>
-              {name}
-            </h2>
+            <div className={styles.profileContainer}>
+              <Link href="/">
+                <Image
+                  priority
+                  src="/images/profile.jpg"
+                  className={`${utilStyles.borderCircle} ${styles.profileImage}`}
+                  height={30}
+                  width={30}
+                  alt=""
+                />
+              </Link>
+              <h2 className={utilStyles.headingLg}>
+                <Link href="/" className={utilStyles.colorInherit}>
+                  {name}
+                </Link>
+              </h2>
+            </div>
           </>
         )}
       </header>

@@ -1,0 +1,115 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 250px; /* Ancho del sidebar */
+  height: 100vh; /* Altura completa del viewport */
+  position: fixed; /* Fijar el sidebar en la pantalla */
+  top: 0; /* Alinear el sidebar en la parte superior */
+  left: -1500px; /* Ocultar la barra lateral por defecto */
+  background-color: #f4f4f4; /* Color de fondo del sidebar */
+  padding: 20px; /* Espaciado interno del sidebar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el sidebar */
+  transition: left 0.3s; /* Transición suave para la apertura y cierre */
+}
+
+.sidebar.open {
+  left: 0; /* Mostrar la barra lateral cuando está abierta */
+}
+
+.sidebar h3 {
+  margin-top: 0; /* Eliminar el margen superior de los títulos */
+  font-size: 1.2rem; /* Tamaño de fuente para los títulos */
+  color: #333; /* Color de texto para los títulos */
+  border-bottom: 1px solid #ddd; /* Línea inferior para separar los títulos */
+  padding-bottom: 10px; /* Espaciado inferior para los títulos */
+}
+
+.sidebar ul {
+  list-style: none; /* Eliminar los estilos de lista */
+  padding: 0; /* Eliminar el padding */
+}
+
+.sidebar ul li {
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.sidebar ul li a {
+  display: block; /* Convertir los enlaces en bloques para ocupar todo el ancho */
+  color: #666; /* Color de texto para los enlaces */
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.sidebar ul li a:hover {
+  color: #000; /* Cambiar el color del texto al pasar el ratón por encima */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+  color: #333; /* Color de texto cuando el enlace está activo */
+}
+
+.sidebar ul li h2 {
+  margin-top: 0; /* Eliminar el margen superior de los títulos */
+  font-size: 1.2rem; /* Tamaño de fuente para los títulos */
+  border-bottom: 1px solid #ddd; /* Línea inferior para separar los títulos */
+  padding-bottom: 1px; /* Espaciado inferior para los títulos */
+  padding-top: 10px;
+}
+
+
+.toggleButton {
+  display: block; /* Mostrar el botón de alternancia en dispositivos móviles */
+  position: fixed; /* Fijar el botón de alternancia en la pantalla */
+  top: 10px; /* Alinear el botón de alternancia en la parte superior */
+  left: 10px; /* Alinear el botón de alternancia a la izquierda */
+  z-index: 999; /* Z-index para que esté por encima del contenido */
+  background-color: transparent; /* Color de fondo transparente */
+  border: none; /* Eliminar borde */
+  font-size: 1.5rem; /* Tamaño de fuente del botón */
+  cursor: pointer; /* Cambiar el cursor a pointer */
+  margin-bottom: 10px;
+  /* display: none; */
+}
+
+/* Media queries para hacer la sidebar responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%; 
+    height: auto; /* Altura automática para adaptarse al contenido */
+    /* position: static;  */
+    box-shadow: none; /* Eliminar sombra */
+    padding: 10px; /* Espaciado interno más pequeño */
+    transition: top 0.5s ease-out;
+  }
+
+  .sidebar.open {
+    top: 0; 
+
+  }
+
+  .toggleButton {
+    display: block; /* Mostrar el botón de alternancia en dispositivos móviles */
+    position: fixed; /* Fijar el botón de alternancia en la pantalla */
+    top: 10px; /* Alinear el botón de alternancia en la parte superior */
+    left: 10px; /* Alinear el botón de alternancia a la izquierda */
+    z-index: 999; /* Z-index para que esté por encima del contenido */
+    background-color: transparent; /* Color de fondo transparente */
+    border: none; /* Eliminar borde */
+    font-size: 1.5rem; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambiar el cursor a pointer */
+  }
+}

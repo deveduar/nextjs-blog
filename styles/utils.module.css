@@ -1,5 +1,5 @@
 .container {
-    max-width: 36rem;
+    max-width: 100rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
 }
@@ -50,8 +50,29 @@
 
 .listItem {
     margin: 0 0 1.25rem;
+    /* display: inline-block; */
+
 }
 
 .lightText {
     color: #666;
 }
+
+.tag {
+  background-color: #e2e8f0; /* Color de fondo */
+  color: #4a5568; /* Color de texto */
+  padding: 0.15rem 0.5rem; /* Espaciado interior */
+  border-radius: 0.3rem; /* Bordes redondeados */
+  text-decoration: none; /* Elimina la subrayado del enlace */
+  margin: 0.2rem;
+  font-size: 0.8em;
+}
+
+.tag:hover {
+  background-color: #cbd5e0; /* Cambia el color de fondo en el hover */
+}
+
+/* .separator { */
+  /* Estilos para la coma */
+/* } */
+
