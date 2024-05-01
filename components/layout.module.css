@@ -12,3 +12,19 @@
 .backToHome {
     margin: 3rem 0 0;
 }
+
+.profileContainer {
+  display: flex; /* Utilizar flexbox para el diseño */
+  align-items: center; /* Centrar verticalmente los elementos */
+
+}
+
+.profileImage {
+  margin-right: 5px; /* Espacio entre la imagen y el título */
+}
+
+/* Ajustar estilos para el enlace */
+.profileContainer a {
+  text-decoration: none; 
+  color: inherit; /* Utilizar el color de texto heredado */
+}
