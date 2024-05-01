@@ -1,3 +1,4 @@
 # Deveduar Blog
-My personal blog, created with next js form his starter template.
+My personal blog, created with Next js.
+
 

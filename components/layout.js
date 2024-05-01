@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import React from "react";
 
 const name = "deveduar";
 export const siteTitle = "deveduar blog";
@@ -11,7 +12,7 @@ export const siteTitle = "deveduar blog";
 //   return <div className={styles.container}>{children}</div>;
 // }
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, posts }) {
   return (
     <div className={styles.container}>
       <Head>
