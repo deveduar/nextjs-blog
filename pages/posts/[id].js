@@ -11,6 +11,10 @@ import { getSortedPostsData } from "../../lib/posts";
 
 export default function Post({ postData, allPostsData }) {
   const currentPostId = postData.id;
+  const contentHtmlWithBlankTarget = postData.contentHtml.replace(
+    /<a(.*?)>/g,
+    '<a$1 target="_blank">'
+  );
   return (
     <>
       <Sidebar posts={allPostsData} currentPostId={currentPostId} />
@@ -39,7 +43,9 @@ export default function Post({ postData, allPostsData }) {
             ))}
           </div>
 
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: contentHtmlWithBlankTarget }}
+          />
         </article>
       </Layout>
     </>

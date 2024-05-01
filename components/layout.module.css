@@ -19,12 +19,17 @@
 
 }
 
+/* demomento aplicado a las paginas de posts */
 .profileImage {
   margin-right: 5px; /* Espacio entre la imagen y el título */
 }
-
-/* Ajustar estilos para el enlace */
 .profileContainer a {
   text-decoration: none; 
   color: inherit; /* Utilizar el color de texto heredado */
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 48rem; /* Ajustar el tamaño del contenedor en pantallas más grandes */
+  }
 }

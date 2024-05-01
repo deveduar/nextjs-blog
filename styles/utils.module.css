@@ -1,5 +1,5 @@
 .container {
-    max-width: 36rem;
+    max-width: 100rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
 }
@@ -50,6 +50,8 @@
 
 .listItem {
     margin: 0 0 1.25rem;
+    /* display: inline-block; */
+
 }
 
 .lightText {

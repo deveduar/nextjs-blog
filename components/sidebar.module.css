@@ -82,6 +82,7 @@
   font-size: 1.5rem; /* Tamaño de fuente del botón */
   cursor: pointer; /* Cambiar el cursor a pointer */
   margin-bottom: 10px;
+  /* display: none; */
 }
 
 /* Media queries para hacer la sidebar responsive */
@@ -112,6 +113,3 @@
     cursor: pointer; /* Cambiar el cursor a pointer */
   }
 }
-
-
-
