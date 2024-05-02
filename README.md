@@ -1,10 +1,10 @@
 # Deveduar Blog
 
 ## Description: 
-🗒 Personal responsive blog created with Next.js and React.js
-
-![](https://i.ibb.co/vV06zJQ/deveduar-blog-2.png)
-
+🗒 Responsive blog created with Next.js and React.js 
+- Demo: [Demo](https://nextjs-blog-xi-indol.vercel.app/) 🗒
+- Code: [GitHub](https://github.com/deveduar/nextjs-blog)
+- Contact me: [Linkedin](http://www.linkedin.com/in/deveduar)
 
 ## Features:
 - Reading markdown posts from the file system
@@ -13,10 +13,19 @@
 - SEO Optimized
 
 ## Technologies:
+- [next.js](https://nextjs.org/)
+- [react.js](https://es.react.dev/)
 - [gray-matter](https://github.com/jonschlinkert/gray-matter)
 - [remark](https://github.com/remarkjs/remark)
 - [date-fns](https://date-fns.org/)
 - [vercel](https://vercel.com/)
 
+## Images:
 
-Contact me on: [Linkedin](http://www.linkedin.com/in/deveduar)
+![](https://i.ibb.co/vV06zJQ/deveduar-blog-2.png)
+
+## Contact
+"Thanks for reading! Want to learn more about me or discuss a collaboration? Get in touch! 📩
+- [GitHub](https://github.com/deveduar)
+- [Linkedin](http://www.linkedin.com/in/deveduar)
+- [Twitter](https://twitter.com/deveduar)
