@@ -26,15 +26,25 @@ export default function Home({ allPostsData }) {
         </Head>
         <section className={utilStyles.headingMd}>
           <p>
-            Hello, I'm deveduar, I'm a web developer and system administrator.
-            You can contact me on <a href="http://www.linkedin.com/in/deveduar" target="_blank">Linkedin</a>
+            Welcome to my personal blog! 👋 Here, I'll be sharing my passion for
+            technology, productivity, and web development. Join me as we explore
+            my projects, technology insights, and tips for boosting productivity
+            🚀.
           </p>
           <p>
-            See more projects <a href="https://github.com/deveduar" target="_blank">Github</a>.
+            You can contact me on{" "}
+            <a href="http://www.linkedin.com/in/deveduar" target="_blank">
+              Linkedin{" "}
+            </a>
+            or see my activity{" "}
+            <a href="https://github.com/deveduar" target="_blank">
+              Github
+            </a>
+            .
           </p>
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>My blog</h2>
+          <h2 className={utilStyles.headingLg}>Posts:</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title, tags }) => (
               <li className={utilStyles.listItem} key={id}>
