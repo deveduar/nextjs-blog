@@ -2,7 +2,7 @@
 
 ## Description: 
 🗒 Responsive blog created with Next.js and React.js 
-- Demo: [Demo](https://nextjs-blog-xi-indol.vercel.app/) 🗒
+- Demo: [Demo](https://nextjs-blog-xi-indol.vercel.app/)
 - Code: [GitHub](https://github.com/deveduar/nextjs-blog)
 - Contact me: [Linkedin](http://www.linkedin.com/in/deveduar)
 

@@ -1,0 +1,41 @@
+.footer {
+  background-color: #fdf7f7;
+  padding: 20px;
+}
+
+.container {
+  display: flex; /* Utilizar flexbox */
+  align-items: center;
+  justify-content: center; 
+
+}
+
+.socialLinks {
+  display: flex; /* Utilizar flexbox */
+  flex-direction: row; /* Alinear los elementos horizontalmente */
+  gap: 10px; /* Espacio entre los elementos */
+  padding-left: 10px;
+}
+
+.socialLinks a {
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
+.socialLinks img {
+  width: 20px; /* Establecer ancho fijo para los iconos */
+}
+
+.container {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.developerInfo {
+  display: flex; /* Utiliza flexbox para los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  
+}
+
+.developerInfo p {
+  margin-right: 5px; /* Añade un margen a la derecha del texto "Developed by" */
+}

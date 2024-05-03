@@ -71,19 +71,6 @@
 }
 
 
-.toggleButton {
-  display: block; /* Mostrar el botón de alternancia en dispositivos móviles */
-  position: fixed; /* Fijar el botón de alternancia en la pantalla */
-  top: 10px; /* Alinear el botón de alternancia en la parte superior */
-  left: 10px; /* Alinear el botón de alternancia a la izquierda */
-  z-index: 999; /* Z-index para que esté por encima del contenido */
-  background-color: transparent; /* Color de fondo transparente */
-  border: none; /* Eliminar borde */
-  font-size: 1.5rem; /* Tamaño de fuente del botón */
-  cursor: pointer; /* Cambiar el cursor a pointer */
-  margin-bottom: 10px;
-  /* display: none; */
-}
 
 /* Media queries para hacer la sidebar responsive */
 @media screen and (max-width: 768px) {
@@ -105,7 +92,7 @@
     display: block; /* Mostrar el botón de alternancia en dispositivos móviles */
     position: fixed; /* Fijar el botón de alternancia en la pantalla */
     top: 10px; /* Alinear el botón de alternancia en la parte superior */
-    left: 10px; /* Alinear el botón de alternancia a la izquierda */
+    right: 0px; /* Alinear el botón de alternancia a la izquierda */
     z-index: 999; /* Z-index para que esté por encima del contenido */
     background-color: transparent; /* Color de fondo transparente */
     border: none; /* Eliminar borde */
