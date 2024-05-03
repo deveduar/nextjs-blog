@@ -31,7 +31,7 @@ status: 🚀
 ![](https://i.ibb.co/vV06zJQ/deveduar-blog-2.png)
 
 ## Contact
-"Thanks for reading! Want to learn more about me or discuss a collaboration? Get in touch! 📩
+Thanks for reading! Want to learn more about me or discuss a collaboration? Get in touch! 📩
 - [GitHub](https://github.com/deveduar)
 - [Linkedin](http://www.linkedin.com/in/deveduar)
 - [Twitter](https://twitter.com/deveduar)

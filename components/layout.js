@@ -29,15 +29,15 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <header className={styles.header}>
+        <header className={`${styles.header} ${home ? styles.home : ""}`}>
           {home ? (
             <>
               <Image
                 priority
                 src="/images/profile.jpg"
                 className={utilStyles.borderCircle}
-                height={144}
-                width={144}
+                height={180}
+                width={180}
                 alt=""
               />
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
