@@ -7,6 +7,7 @@ import Date from "../components/date";
 import React from "react";
 import Sidebar from "../components/sidebar"; 
 
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
