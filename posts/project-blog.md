@@ -1,7 +1,7 @@
 ---
 title: "🛠 My personal blog developed with next js"
 date: "2024-05-02"
-tags: [programacion, project, blog, next.js]
+tags: [programmation, project, blog, next.js]
 status: 🚀
 
 ---
