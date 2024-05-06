@@ -30,3 +30,74 @@ tags: [github, programacion]
 6. Sube los cambios a GitHub:
 	- Utiliza `git push -u origin main` para subir los cambios a la rama "main" en GitHub.
 7. Verifica en GitHub
+
+## CSS Snippets
+#### Plugin Tasks
+
+```css
+/* Priority as Checkbox Color and Remove the Emoji */
+.task-list-item[data-task-priority="highest"] input[type=checkbox] {
+    box-shadow: 0px 0px 2px 2px #ff006e;
+    border-color: #ff006e;
+}
+
+.task-list-item[data-task-priority="normal"] input[type=checkbox] {
+    box-shadow: 0px 0px 2px 2px #2b2d42;
+    border-color: #2b2d42;
+}
+
+.task-list-item[data-task-priority="high"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-red);
+    border-color: var(--color-red);
+}
+
+.task-list-item[data-task-priority="medium"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.task-list-item[data-task-priority="low"] input[type=checkbox] {
+    box-shadow: 0px 0px 1px 1px var(--color-cyan);
+    border-color: var(--color-cyan);
+}
+
+
+input[type=checkbox]:checked {
+    box-shadow: none !important;
+    border-color: var(--checkbox-border-color) !important;
+}
+
+.task-description {
+    margin-left:3px;
+}
+
+
+.tasks-group-heading p {
+    margin-left:2.2em;
+    font-size: 0.9em !important;
+    padding-bottom: 0.1px !important;
+    color: #8fbaff !important;
+}
+
+.cm-preview-code-block.cm-embed-block.markdown-rendered, .block-language-tasks {
+    background-color: rgba(20, 18, 20, 0.986);
+    border: 0.1em solid #373634;
+    overflow: hidden; /* truncar elementos */
+}
+.block-language-tasks span {
+    margin-left: 1px;
+}
+
+
+.block-language-tasks li {
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+
+.block-language-tasks li:hover {
+  white-space: normal;
+  overflow: visible; 
+  text-overflow: unset; 
+  background-color: rgba(188, 187, 187, 0.3);
+}
+```
+

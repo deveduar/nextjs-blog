@@ -44,6 +44,7 @@ export default function Post({ postData, allPostsData }) {
           </div>
 
           <div
+            className={utilStyles.contenedorhtml}
             dangerouslySetInnerHTML={{ __html: contentHtmlWithBlankTarget }}
           />
         </article>

@@ -1,48 +1,44 @@
 ---
-title: "Asi uso obsidian en 2024"
-date: "2024-04-30"
-tags: [obsidian]
+title: "⭐ My favourite plugins for obsidian"
+date: "2024-05-06"
+tags: [obsidian, productivity]
+status: 📌
+
 ---
+## Description
+My favourite plugins for Obsidian that I currently use for personal knowledge management.
 
-## ideas
-- template de zotero
-- plugins que uso
-- sistema de iconos
+![obsidian](https://i.ibb.co/BtQkSNH/2024-05-06-03-42-29.png)
 
-## Plugins Essenciales
-- Dataview
-- Templater
-
-## Integracion con zotero para capturar highlights
-- template con [nunjucks](https://mozilla.github.io/nunjucks/)
-- configuracion del plugin
-- plugins necesarios para zotero
-- aplicacion zotero
-
-## Integracion con Omnivore para capturar informacion y highlights de paginas web
-- instalacion de omnivore, api
-- instalacion del plugin obsdian
-- template de omnivore
-- aplicacion omnibore
-
-## Como organizo mi diario 
-- plugins periodic notes, calendar
-- directorios
-
-## Como organizo tareas de cada area
-- plugin tasks
-
-## Apariencia de obsidian
-- snippets css
-- code styler plugin
-- annapuching theme
-- Colored tags
-
-## Plugins para reorganizar informacion
-- Advanced merger
-
-## Backups con github
-- plugin git
-- crear repp
-
-## mi organizacion de carpetas en obsidian
+## Essentials
+- [Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
+- [Templater](https://silentvoid13.github.io/Templater/)
+- [Tasks](https://publish.obsidian.md/tasks/Introduction)
+## Diary
+- [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Periodic Notes](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Reminder](https://obsidian.md/plugins?id=obsidian-reminder-plugin)
+## Vault Organization
+- [Advanced merger](https://obsidian.md/plugins?id=advanced-merger)
+- [Multi properties](https://obsidian.md/plugins?id=multi-properties)
+- [Multi Tags](https://obsidian.md/plugins?id=multi-tag)
+- [Note Refactor](https://obsidian.md/plugins?id=note-refactor-obsidian)
+- [Quick Tagger](https://obsidian.md/plugins?id=quick-tagger)
+## Appearance
+- [annapuching theme](https://github.com/AnubisNekhet/AnuPpuccin)
+- [Code Styler](https://obsidian.md/plugins?id=code-styler)
+- [Colored tags](https://obsidian.md/plugins?id=colored-tags)
+- [Iconize](https://obsidian.md/plugins?id=obsidian-icon-folder)
+- [Image Toolkit](https://obsidian.md/plugins?id=obsidian-image-toolkit)
+- [Quiet Outline](https://obsidian.md/plugins?id=obsidian-quiet-outline)
+- [Style Settings](https://obsidian.md/plugins?id=obsidian-style-settings)
+## Others
+- [Full Calendar](https://obsidian.md/plugins?id=obsidian-full-calendar)
+- [Custom Frames](https://obsidian.md/plugins?id=obsidian-custom-frames)
+- [Excalidraw](https://obsidian.md/plugins?id=obsidian-excalidraw-plugin)
+- [Kanban](https://obsidian.md/plugins?id=obsidian-kanban)
+- [Search on internet](https://obsidian.md/plugins?id=search-on-internet)
+## Integrations and backups
+- [Zotero integration](https://obsidian.md/plugins?id=obsidian-zotero-desktop-connector)
+- [Git](https://obsidian.md/plugins?id=obsidian-git)
+- [Omnivore](https://obsidian.md/plugins?id=obsidian-omnivore)
