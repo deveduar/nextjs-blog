@@ -78,12 +78,6 @@ input[type=checkbox]:checked {
 }
 ```
 
-
-
-
-
-
-
 ## Omnivore Plugin
 ```css
 /* Callouts for Omnivore Highlights */
