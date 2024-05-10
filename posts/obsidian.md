@@ -28,7 +28,6 @@ My favourite plugins for Obsidian that I currently use for personal knowledge ma
 - [annapuching theme](https://github.com/AnubisNekhet/AnuPpuccin)
 - [Code Styler](https://obsidian.md/plugins?id=code-styler)
 - [Colored tags](https://obsidian.md/plugins?id=colored-tags)
-- [Iconize](https://obsidian.md/plugins?id=obsidian-icon-folder)
 - [Image Toolkit](https://obsidian.md/plugins?id=obsidian-image-toolkit)
 - [Quiet Outline](https://obsidian.md/plugins?id=obsidian-quiet-outline)
 - [Style Settings](https://obsidian.md/plugins?id=obsidian-style-settings)
