@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .container {
-    max-width: 100rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
+    /* max-width: 100rem;
+    padding: 0 1rem; */
+    /* margin: 3rem auto 6rem; */
+    /* padding: 2em;
+    margin: 2em; */
+    padding: 1.5em;
+    margin: 1.5em;
+  background-color: blanchedalmond;
+
 }
 .heading2Xl {
     font-size: 1.8rem;
@@ -11,6 +17,7 @@
     font-weight: 800;
     letter-spacing: -0.05rem;
     margin: 1rem 0;
+    
 }
 
 .headingXl {
@@ -71,7 +78,9 @@
 }
 
 .tag:hover {
-  background-color: #cbd5e0; /* Cambia el color de fondo en el hover */
+  background-color: #cbd5e0; 
+  text-decoration: none; 
+
 }
 
 /* .separator { */
@@ -110,3 +119,4 @@
   font-size: 0.9rem; 
   /* line-height: 2px;  */
 }
+

@@ -1,0 +1,13 @@
+.container {
+    /* max-width: 100rem;
+    padding: 0 1rem; */
+    /* margin: 3rem auto 6rem; */
+    /* padding: 2em;
+    margin: 2em; */
+    padding: 1.5em;
+    margin: 1.5em;
+  background-color: blanchedalmond;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}

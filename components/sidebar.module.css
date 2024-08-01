@@ -4,12 +4,13 @@
   width: 250px; /* Ancho del sidebar */
   height: 100vh; /* Altura completa del viewport */
   position: fixed; /* Fijar el sidebar en la pantalla */
-  top: 0; /* Alinear el sidebar en la parte superior */
-  left: -1500px; /* Ocultar la barra lateral por defecto */
+  top: 0;
+  left: -250px; /* Ocultar el sidebar inicialmente */
   background-color: #f4f4f4; /* Color de fondo del sidebar */
   padding: 20px; /* Espaciado interno del sidebar */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el sidebar */
-  transition: left 0.3s; /* Transición suave para la apertura y cierre */
+  transition: left 0.3s; /* Transición suave para el desplazamiento */
+  z-index: 1000; /* Asegurar que el sidebar esté por encima del contenido */
 }
 
 .sidebar.open {
@@ -70,33 +71,26 @@
   padding-top: 10px;
 }
 
-
+.toggleButton {
+  position: fixed; /* Fijar el botón de alternancia en la pantalla */
+  top: 10px; /* Alinear el botón de alternancia en la parte superior */
+  left: 10px; /* Alinear el botón de alternancia a la izquierda */
+  z-index: 1100; 
+  background-color: transparent; /* Color de fondo transparente */
+  border: none; /* Eliminar borde */
+  font-size: 1.5rem; /* Tamaño de fuente del botón */
+  cursor: pointer; /* Cambiar el cursor a pointer */
+}
 
 /* Media queries para hacer la sidebar responsive */
 @media screen and (max-width: 768px) {
   .sidebar {
-    width: 100%; 
-    height: auto; /* Altura automática para adaptarse al contenido */
-    /* position: static;  */
-    box-shadow: none; /* Eliminar sombra */
-    padding: 10px; /* Espaciado interno más pequeño */
-    transition: top 0.5s ease-out;
+    width: 250px; /* Mantener el ancho del sidebar en pantallas pequeñas */
+    /* left: -250px;  */
+    transition: left 0.3s ease-out;
   }
 
   .sidebar.open {
-    top: 0; 
-
-  }
-
-  .toggleButton {
-    display: block; /* Mostrar el botón de alternancia en dispositivos móviles */
-    position: fixed; /* Fijar el botón de alternancia en la pantalla */
-    top: 10px; /* Alinear el botón de alternancia en la parte superior */
-    right: 0px; /* Alinear el botón de alternancia a la izquierda */
-    z-index: 999; /* Z-index para que esté por encima del contenido */
-    background-color: transparent; /* Color de fondo transparente */
-    border: none; /* Eliminar borde */
-    font-size: 1.5rem; /* Tamaño de fuente del botón */
-    cursor: pointer; /* Cambiar el cursor a pointer */
+    left: 0; 
   }
 }

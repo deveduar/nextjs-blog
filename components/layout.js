@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
         <header className={`${styles.header} ${home ? styles.home : ""}`}>
           {home ? (
             <>
-              <Image
+              {/* <Image
                 priority
                 src="/images/profile.jpg"
                 className={utilStyles.borderCircle}
@@ -40,8 +40,26 @@ export default function Layout({ children, home }) {
                 width={180}
                 alt=""
               />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
+              <div className={styles.profileContainer}>
+                <Link href="/">
+                  <Image
+                    priority
+                    src="/images/profile.jpg"
+                    className={`${utilStyles.borderCircle} ${styles.profileImage}`}
+                    height={30}
+                    width={30}
+                    alt=""
+                  />
+                </Link>
+                <h2 className={utilStyles.headingLg}>
+                  <Link href="/" className={utilStyles.colorInherit}>
+                    {name}
+                  </Link>
+                </h2>
+              </div>
             </>
+
           ) : (
             <>
               <div className={styles.profileContainer}>
@@ -70,8 +88,9 @@ export default function Layout({ children, home }) {
             <Link href="/">← Back to home</Link>
           </div>
         )}
-      </div>
       <Footer />
+
+      </div>
     </>
   );
 }
