@@ -6,6 +6,8 @@ import React from "react";
 import Sidebar from "../components/sidebar"; 
 import About from "../components/about";
 import PostsCards from "../components/postsCards"; 
+import Footer from "../components/footer";
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -20,13 +22,19 @@ export default function Home({ allPostsData }) {
   return (
     <>
       <Sidebar posts={allPostsData} />
-      <Layout home>
+      {/* <Layout home> */}
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <PostsCards posts={allPostsData} /> {/* Usar PostsCards */}
-        <About />
-      </Layout>
+      {/* </Layout> */}
+      <div className={utilStyles.wrapper}>
+      <PostsCards posts={allPostsData} />
+      
+      <About />
+
+
+      </div>
+      <Footer></Footer>
     </>
   );
 }

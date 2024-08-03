@@ -4,7 +4,8 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import React from "react";
-import Footer from "../components/footer";
+import Footer from "./footer";
+
 
 const name = "@deveduar blog";
 export const siteTitle = "deveduar blog";
@@ -16,7 +17,7 @@ export const siteTitle = "deveduar blog";
 export default function Layout({ children, home }) {
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.containerPostPage}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Personal website using Next.js" />
@@ -82,15 +83,20 @@ export default function Layout({ children, home }) {
             </>
           )}
         </header>
-        <main>{children}</main>
+        <div  className={styles.containerPost}>
+        <main >{children}</main>
         {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">← Back to home</Link>
-          </div>
-        )}
-      <Footer />
 
+        <>
+        <div className={styles.backToHome}>
+            <Link href="/">← Back to home</Link>
+        </div>
+        </>
+        )}
+        </div>
       </div>
+      <Footer></Footer>
+
     </>
   );
 }

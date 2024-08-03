@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .container {
-    /* max-width: 100rem;
-    padding: 0 1rem; */
+    max-width: 100rem;
+    padding: 0 1rem;
     /* margin: 3rem auto 6rem; */
-    /* padding: 2em;
-    margin: 2em; */
+    /* padding: 2em; */
+    /* margin: 2em; */
     padding: 1.5em;
     margin: 1.5em;
-  background-color: blanchedalmond;
+  /* background-color: rgb(122, 86, 31); */
 
 }
 .heading2Xl {
@@ -97,7 +97,7 @@
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 1rem;
-  overflow-x: auto; /* Añadir barras de desplazamiento horizontal si el código es demasiado ancho */
+  overflow-x: auto; 
   font-family: monospace; /* Utilizar una fuente monoespaciada para el código */
   font-size: 0.9rem; /* Tamaño de fuente ligeramente más pequeño */
   line-height: 1.5; /* Espaciado entre líneas */
@@ -111,7 +111,6 @@
   /* font-style: normal; */
   /* padding: 1rem; */
   text-align: center;
-  padding: 2px 10px;
   border-radius: 4px;
   /* margin-bottom: 1rem; */
   /* overflow-x: auto; 
@@ -120,3 +119,22 @@
   /* line-height: 2px;  */
 }
 
+.wrapper {
+
+
+  background-color: rgb(213, 213, 213);
+  padding: 2rem 0rem 2rem 0rem;
+  
+}
+.wrapperTagView {
+ height: 80vh;
+  /* margin: 2rem 1.5rem 2rem 1.5rem; */
+  /* padding: 2rem 1.5rem 2rem 1.5rem; */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /* max-width: 600px; */
+  /* justify-items: center; */
+/* align-items: center; */
+/* background-color: #cce5ff; */
+}

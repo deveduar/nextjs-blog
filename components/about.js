@@ -1,13 +1,13 @@
 import React from "react";
 import utilStyles from "../styles/utils.module.css";
-// import Styles from "./about.module.css";
+import styles from "./about.module.css";
 
 const About = () => {
     const name = "@deveduar blog";
 
 
   return (
-    <section className={utilStyles.container}>
+    <section className={styles.container}>
     {/* <h1 className={utilStyles.heading2Xl}>{name}</h1>  */}
     <h1 className={utilStyles.heading2Xl}>About</h1> 
     <p>

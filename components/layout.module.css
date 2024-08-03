@@ -6,12 +6,27 @@
   min-height: 100vh;
 } */
 
-.container {
+.containerPostPage {
   display: flex; 
   flex-direction: column;
   justify-content: center; 
+  /* align-items: center; */
+  margin: 0 auto ;
+  background-color: rgb(213, 213, 213);
+  flex: 1;
   
 }
+
+.containerPost {
+  display: flex; 
+  flex-direction: column;
+ padding: 1.5em;
+ margin: 1.5rem;
+ background-color: rgb(255, 255, 255);
+
+}
+
+
 
 .header {
   display: flex;
@@ -25,12 +40,16 @@
 } */
 
 .backToHome {
-  margin: 3rem 0 0;
+  /* margin: 0rem 2rem 2rem; */
+  /* margin: 0 auto; */
+  padding-top: 2rem;
+  align-self: flex-start;
+
 }
 
 .profileContainer {
-  display: flex; /* Utilizar flexbox para el diseño */
-  align-items: center; /* Centrar verticalmente los elementos */
+  display: flex; 
+  align-items: center;
 }
 
 .profileImage {
@@ -42,9 +61,9 @@
   color: inherit; 
 }
 
-.content {
+/* .content {
   flex: 1;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .container {

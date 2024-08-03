@@ -1,4 +1,28 @@
 .container {
-  background-color: blanchedalmond;
+  flex: 1;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5em;
+  max-width: 600px; 
+  word-wrap: break-word; 
+  margin: 0 auto;
+  margin-bottom: 2rem;
 
+}
+/* .container p {
+  display: inline-block;
+  padding: 1.5em;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 1.5em;
+box-sizing: border-box;
+  } */
+
+
+  .textContainer {
+    max-width: 800px; /* Ajusta este valor según tus necesidades */
+    
   }
