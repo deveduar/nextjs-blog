@@ -49,6 +49,7 @@ export default function Post({ postData, allPostsData }) {
           />
         </article>
       </Layout>
+
     </>
   );
 }

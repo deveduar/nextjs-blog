@@ -2,6 +2,9 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import { getSortedPostsData } from "../../lib/posts";
 import Sidebar from "../../components/sidebar"; 
+import utilStyles from "../../styles/utils.module.css";
+
+
 
 export async function getStaticPaths() {
   const allPostsData = getSortedPostsData();
@@ -43,8 +46,9 @@ export default function Tag({ tag, posts, allPostsData }) {
     <>
       <Sidebar posts={allPostsData} />
       <Layout>
+        <div className={utilStyles.wrapperTagView}>
         <h1>Posts tagged with {tag}</h1>
-        <ul>
+        <ul >
           {posts.map((post) => (
             <li key={post.id}>
               {/* Enlace al post */}
@@ -52,7 +56,10 @@ export default function Tag({ tag, posts, allPostsData }) {
             </li>
           ))}
         </ul>
+        </div>
+
       </Layout>
+
     </>
   );
 }
