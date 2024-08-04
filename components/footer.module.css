@@ -8,7 +8,7 @@
 .socialLinks {
   display: flex; 
   flex-direction: row; 
-  gap: 10px; 
+  /* gap: 4px;  */
   padding-left: 10px;
 }
 
@@ -18,22 +18,23 @@
 }
 
 .socialLinks img {
-  width: 20px; 
+  width: 30px; 
+  margin-top: 0.3em;
 }
 
 .container {
   display: flex; 
   align-items: center;
   justify-content: center; 
-
+  flex-direction: row;
 }
 
 .developerInfo {
-  display: flex; /* Utiliza flexbox para los elementos */
-  align-items: center; /* Centra verticalmente los elementos */
+  display: flex; 
+  align-items: center;
   
 }
 
 .developerInfo p {
-  margin-right: 5px; /* Añade un margen a la derecha del texto "Developed by" */
+  margin-right: 5px; 
 }

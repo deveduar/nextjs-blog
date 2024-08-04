@@ -26,13 +26,11 @@ export default function Home({ allPostsData }) {
         <Head>
           <title>{siteTitle}</title>
         </Head>
+  
       {/* </Layout> */}
       <div className={utilStyles.wrapper}>
       <PostsCards posts={allPostsData} />
-      
       <About />
-
-
       </div>
       <Footer></Footer>
     </>

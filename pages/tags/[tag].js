@@ -47,7 +47,7 @@ export default function Tag({ tag, posts, allPostsData }) {
       <Sidebar posts={allPostsData} />
       <Layout>
         <div className={utilStyles.wrapperTagView}>
-        <h1>Posts tagged with {tag}</h1>
+        <h1 className={utilStyles.headingLg }>Posts tagged with {tag}</h1>
         <ul >
           {posts.map((post) => (
             <li key={post.id}>

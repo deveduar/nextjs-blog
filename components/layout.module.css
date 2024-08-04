@@ -1,29 +1,28 @@
 
 
-/* .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-} */
-
 .containerPostPage {
   display: flex; 
   flex-direction: column;
   justify-content: center; 
   /* align-items: center; */
   margin: 0 auto ;
-  background-color: rgb(213, 213, 213);
+  background-color: #f4f4f4;
   flex: 1;
   
 }
 
 .containerPost {
-  display: flex; 
+  flex: 1;
+  margin: 5em;
+  display: flex;
   flex-direction: column;
- padding: 1.5em;
- margin: 1.5rem;
- background-color: rgb(255, 255, 255);
-
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5em;
+  max-width: 800px; 
+  word-wrap: break-word; 
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 

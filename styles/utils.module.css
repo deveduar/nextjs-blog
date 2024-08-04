@@ -119,15 +119,16 @@
   /* line-height: 2px;  */
 }
 
+
 .wrapper {
 
 
-  background-color: rgb(213, 213, 213);
+  background-color: #f4f4f4;
   padding: 2rem 0rem 2rem 0rem;
   
 }
 .wrapperTagView {
- height: 80vh;
+ /* height: 80vh; */
   /* margin: 2rem 1.5rem 2rem 1.5rem; */
   /* padding: 2rem 1.5rem 2rem 1.5rem; */
   display: flex;
