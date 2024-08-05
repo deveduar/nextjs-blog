@@ -1,14 +1,12 @@
-
+/* layout.module.css */
 
 .containerPostPage {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  justify-content: center; 
-  /* align-items: center; */
-  margin: 0 auto ;
+  justify-content: center;
+  margin: 0 auto;
   background-color: #f4f4f4;
   flex: 1;
-  
 }
 
 .containerPost {
@@ -19,35 +17,25 @@
   justify-content: center;
   background-color: rgb(255, 255, 255);
   padding: 1.5em;
-  max-width: 800px; 
-  word-wrap: break-word; 
+  max-width: 800px;
+  word-wrap: break-word;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
-
-
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-/* .header.home {
-  margin-top: 1rem;
-} */
-
 .backToHome {
-  /* margin: 0rem 2rem 2rem; */
-  /* margin: 0 auto; */
   padding-top: 2rem;
   align-self: flex-start;
-
 }
 
 .profileContainer {
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -56,16 +44,13 @@
 }
 
 .profileContainer a {
-  text-decoration: none; 
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
 }
 
-/* .content {
-  flex: 1;
-} */
-
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 50rem; 
+  .containerPostPage.contentShift {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
   }
 }

@@ -6,18 +6,13 @@ import Link from "next/link";
 import React from "react";
 import Footer from "./footer";
 
-
 const name = "@deveduar blog";
 export const siteTitle = "deveduar blog";
-
-// export default function Layout({ children }) {
-//   return <div className={styles.container}>{children}</div>;
-// }
 
 export default function Layout({ children, home }) {
   return (
     <>
-      <div className={styles.containerPostPage}>
+      <div className={`${styles.containerPostPage}`}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Personal website using Next.js" />
@@ -33,15 +28,6 @@ export default function Layout({ children, home }) {
         <header className={`${styles.header} ${home ? styles.home : ""}`}>
           {home ? (
             <>
-              {/* <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={180}
-                width={180}
-                alt=""
-              />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
               <div className={styles.profileContainer}>
                 <Link href="/">
                   <Image
@@ -60,7 +46,6 @@ export default function Layout({ children, home }) {
                 </h2>
               </div>
             </>
-
           ) : (
             <>
               <div className={styles.profileContainer}>
@@ -83,20 +68,16 @@ export default function Layout({ children, home }) {
             </>
           )}
         </header>
-        <div  className={styles.containerPost}>
-        <main >{children}</main>
-        {!home && (
-
-        <>
-        <div className={styles.backToHome}>
-            <Link href="/">← Back to home</Link>
-        </div>
-        </>
-        )}
+        <div className={styles.containerPost}>
+          <main>{children}</main>
+          {!home && (
+            <div className={styles.backToHome}>
+              <Link href="/">← Back to home</Link>
+            </div>
+          )}
         </div>
       </div>
-      <Footer></Footer>
-
+      <Footer />
     </>
   );
 }

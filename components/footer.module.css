@@ -5,6 +5,13 @@
 }
 
 
+.container {
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  flex-direction: row;
+}
+
 .socialLinks {
   display: flex; 
   flex-direction: row; 
@@ -22,12 +29,6 @@
   margin-top: 0.3em;
 }
 
-.container {
-  display: flex; 
-  align-items: center;
-  justify-content: center; 
-  flex-direction: row;
-}
 
 .developerInfo {
   display: flex; 

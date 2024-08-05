@@ -3,51 +3,87 @@ import Link from "next/link";
 import styles from "./sidebar.module.css";
 
 const Sidebar = ({ posts, currentPostId }) => {
-    const [isOpen, setIsOpen] = useState(false);    
-    const sidebarRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState([]);
+  const sidebarRef = useRef(null);
 
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleDropdown = (dropdownId) => {
+    setOpenDropdowns((prev) => 
+      prev.includes(dropdownId)
+        ? prev.filter((id) => id !== dropdownId)
+        : [...prev, dropdownId]
+    );
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
     };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
-    useEffect(() => {
-      const handleClickOutside = (event) => {
-        if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-          // Si se hace clic fuera del menú, cerrarlo
-          setIsOpen(false);
-        }
-      };
-      // Agregar el manejador de eventos de clic al cuerpo del documento
-      document.addEventListener("click", handleClickOutside);
-      return () => {
-        // Limpiar el manejador de eventos al desmontar el componente
-        document.removeEventListener("click", handleClickOutside);
-      };
-    }, []);
-    
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add(styles.contentShift);
+    } else {
+      document.body.classList.remove(styles.contentShift);
+    }
+  }, [isOpen]);
+
   return (
-    <div ref={sidebarRef} className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}
-    >
-      {/* <h2>Menu</h2> */}
+    <div ref={sidebarRef} className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
       <button className={styles.toggleButton} onClick={toggleSidebar}>
         ☰
       </button>
-      <ul>
-        <li>
-          <h2>
-            <Link href="/">Home</Link>
-          </h2>
+      <ul className={styles.list}>
+        <li className={styles.listItem}>
+          <Link href="/" className={styles.link}>
+            Home
+          </Link>
         </li>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Link
-              className={post.id === currentPostId ? styles.active : ""}
-              href={`/posts/${post.id}`}
-            >
-              {post.title}
-            </Link>
-          </li>
-        ))}
+        <li className={styles.listItem}>
+          <h2 className={styles.heading} onClick={() => toggleDropdown(1)}>
+            Posts
+          </h2>
+          <ul className={`${styles.dropdown} ${openDropdowns.includes(1) ? styles.open : ""}`}>
+            {posts.map((post) => (
+              <li key={post.id} className={styles.dropdownItem}>
+                <Link
+                  className={`${styles.dropdownLink} ${post.id === currentPostId ? styles.active : ""}`}
+                  href={`/posts/${post.id}`}
+                >
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li className={styles.listItem}>
+          <h2 className={styles.heading} onClick={() => toggleDropdown(2)}>
+            Labels
+          </h2>
+          <ul className={`${styles.dropdown} ${openDropdowns.includes(2) ? styles.open : ""}`}>
+            <li className={styles.dropdownItem}>
+              <Link className={styles.dropdownLink} href="/category1">
+                Category 1
+              </Link>
+            </li>
+            <li className={styles.dropdownItem}>
+              <Link className={styles.dropdownLink} href="/category2">
+                Category 2
+              </Link>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   );
