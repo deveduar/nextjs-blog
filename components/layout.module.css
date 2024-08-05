@@ -3,25 +3,11 @@
 .containerPostPage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  /* justify-content: center; */
+  /* margin: 0 auto; */
   background-color: #f4f4f4;
-  flex: 1;
 }
 
-.containerPost {
-  flex: 1;
-  margin: 5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  padding: 1.5em;
-  max-width: 800px;
-  word-wrap: break-word;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-}
 
 .header {
   display: flex;
@@ -30,8 +16,17 @@
 }
 
 .backToHome {
-  padding-top: 2rem;
-  align-self: flex-start;
+  padding: 1.5em;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: rgb(255, 255, 255);
+  flex: 1; /* O usa flex-basis: 100%; para asegurarte de que ocupe el mismo espacio que los hermanos */
+  box-sizing: border-box; 
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+
 }
 
 .profileContainer {
@@ -48,9 +43,18 @@
   color: inherit;
 }
 
-@media screen and (min-width: 768px) {
-  .containerPostPage.contentShift {
+/* Class to shift content when sidebar is open */
+.contentShift {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  /* .containerPostPage.contentShift {
     margin-left: 250px;
     transition: margin-left 0.3s ease;
+  } */
+  .contentShift {
+    margin-left: 0;
   }
 }

@@ -1,17 +1,64 @@
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
-import React from "react";
 import Footer from "./footer";
+import Sidebar from "./sidebar";
 
 const name = "@deveduar blog";
 export const siteTitle = "deveduar blog";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, allPostsData, currentPostId }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState([]);
+  const sidebarRef = useRef(null);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleDropdown = (dropdownId) => {
+    setOpenDropdowns((prev) =>
+      prev.includes(dropdownId)
+        ? prev.filter((id) => id !== dropdownId)
+        : [...prev, dropdownId]
+    );
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target) && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    // console.log('Sidebar isOpen:', isOpen);
+    if (isOpen) {
+      document.body.classList.add(styles.contentShift);
+    } else {
+      document.body.classList.remove(styles.contentShift);
+    }
+  }, [isOpen]);
+
   return (
     <>
+      <Sidebar
+        posts={allPostsData}
+        currentPostId={currentPostId}
+        isOpen={isOpen}
+        toggleSidebar={toggleSidebar}
+        openDropdowns={openDropdowns}
+        toggleDropdown={toggleDropdown}
+        sidebarRef={sidebarRef}
+      />
       <div className={`${styles.containerPostPage}`}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
@@ -68,7 +115,7 @@ export default function Layout({ children, home }) {
             </>
           )}
         </header>
-        <div className={styles.containerPost}>
+        <div >
           <main>{children}</main>
           {!home && (
             <div className={styles.backToHome}>

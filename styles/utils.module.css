@@ -120,13 +120,6 @@
 }
 
 
-.wrapper {
-
-
-  background-color: #f4f4f4;
-  padding: 2rem 0rem 2rem 0rem;
-  
-}
 .wrapperTagView {
  /* height: 80vh; */
   /* margin: 2rem 1.5rem 2rem 1.5rem; */
@@ -138,4 +131,19 @@
   /* justify-items: center; */
 /* align-items: center; */
 /* background-color: #cce5ff; */
+}
+
+.containerPost {
+  flex: 1;
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5em;
+  max-width: 1000px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  /* margin-bottom: 2rem; */
+  
 }

@@ -101,18 +101,13 @@
   color: #000;
 }
 
-/* Class to shift content when sidebar is open */
-.contentShift {
-  margin-left: 250px;
-  transition: margin-left 0.3s ease;
-}
 
 @media screen and (max-width: 768px) {
-  .sidebar {
+  /* .sidebar {
     width: 250px;
     transition: left 0.3s ease-out;
-  }
-  .contentShift {
+  } */
+  /* .contentShift {
     margin-left: 0;
-  }
+  } */
 }

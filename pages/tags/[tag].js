@@ -1,10 +1,7 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
 import { getSortedPostsData } from "../../lib/posts";
-import Sidebar from "../../components/sidebar"; 
 import utilStyles from "../../styles/utils.module.css";
-
-
 
 export async function getStaticPaths() {
   const allPostsData = getSortedPostsData();
@@ -43,23 +40,17 @@ export async function getStaticProps({ params }) {
 
 export default function Tag({ tag, posts, allPostsData }) {
   return (
-    <>
-      <Sidebar posts={allPostsData} />
-      <Layout>
-        <div className={utilStyles.wrapperTagView}>
-        <h1 className={utilStyles.headingLg }>Posts tagged with {tag}</h1>
-        <ul >
+    <Layout allPostsData={allPostsData}>
+      <div className={utilStyles.containerPost}>
+        <h1 className={utilStyles.headingLg}>Posts tagged with {tag}</h1>
+        <ul>
           {posts.map((post) => (
             <li key={post.id}>
-              {/* Enlace al post */}
               <Link href={`/posts/${post.id}`}>{post.title}</Link>
             </li>
           ))}
         </ul>
-        </div>
-
-      </Layout>
-
-    </>
+      </div>
+    </Layout>
   );
 }

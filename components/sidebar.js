@@ -1,46 +1,29 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import styles from "./sidebar.module.css";
 
-const Sidebar = ({ posts, currentPostId }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [openDropdowns, setOpenDropdowns] = useState([]);
-  const sidebarRef = useRef(null);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const toggleDropdown = (dropdownId) => {
-    setOpenDropdowns((prev) => 
-      prev.includes(dropdownId)
-        ? prev.filter((id) => id !== dropdownId)
-        : [...prev, dropdownId]
-    );
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add(styles.contentShift);
-    } else {
-      document.body.classList.remove(styles.contentShift);
-    }
-  }, [isOpen]);
+const Sidebar = ({
+  posts,
+  currentPostId,
+  isOpen,
+  toggleSidebar,
+  openDropdowns,
+  toggleDropdown,
+  sidebarRef, // Recibir sidebarRef como prop
+}) => {
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.classList.add(styles.contentShift);
+  //   } else {
+  //     document.body.classList.remove(styles.contentShift);
+  //   }
+  // }, [isOpen]);
 
   return (
-    <div ref={sidebarRef} className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
+    <div
+      ref={sidebarRef}
+      className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}
+    >
       <button className={styles.toggleButton} onClick={toggleSidebar}>
         ☰
       </button>
@@ -54,11 +37,17 @@ const Sidebar = ({ posts, currentPostId }) => {
           <h2 className={styles.heading} onClick={() => toggleDropdown(1)}>
             Posts
           </h2>
-          <ul className={`${styles.dropdown} ${openDropdowns.includes(1) ? styles.open : ""}`}>
+          <ul
+            className={`${styles.dropdown} ${
+              openDropdowns.includes(1) ? styles.open : ""
+            }`}
+          >
             {posts.map((post) => (
               <li key={post.id} className={styles.dropdownItem}>
                 <Link
-                  className={`${styles.dropdownLink} ${post.id === currentPostId ? styles.active : ""}`}
+                  className={`${styles.dropdownLink} ${
+                    post.id === currentPostId ? styles.active : ""
+                  }`}
                   href={`/posts/${post.id}`}
                 >
                   {post.title}
@@ -71,7 +60,11 @@ const Sidebar = ({ posts, currentPostId }) => {
           <h2 className={styles.heading} onClick={() => toggleDropdown(2)}>
             Labels
           </h2>
-          <ul className={`${styles.dropdown} ${openDropdowns.includes(2) ? styles.open : ""}`}>
+          <ul
+            className={`${styles.dropdown} ${
+              openDropdowns.includes(2) ? styles.open : ""
+            }`}
+          >
             <li className={styles.dropdownItem}>
               <Link className={styles.dropdownLink} href="/category1">
                 Category 1
