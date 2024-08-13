@@ -8,7 +8,7 @@ import styles from "./postsCards.module.css";
 const PostsCards = ({ posts }) => {
   return (
     <section className={styles.container}>
-      <h2 className={utilStyles.headingLg}>Last Posts:</h2>
+      <h1 className={utilStyles.heading2Xl}>Last Posts:</h1>
       <ul className={utilStyles.list}>
         {posts.map(({ id, date, title, tags }) => (
           <li className={utilStyles.listItem} key={id}>

@@ -1,23 +1,65 @@
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
-import React from "react";
 import Footer from "./footer";
-
+import Sidebar from "./sidebar";
 
 const name = "@deveduar blog";
 export const siteTitle = "deveduar blog";
 
-// export default function Layout({ children }) {
-//   return <div className={styles.container}>{children}</div>;
-// }
+export default function Layout({ children, home, allPostsData, currentPostId }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState([]);
+  const sidebarRef = useRef(null);
 
-export default function Layout({ children, home }) {
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleDropdown = (dropdownId) => {
+    setOpenDropdowns((prev) =>
+      prev.includes(dropdownId)
+        ? prev.filter((id) => id !== dropdownId)
+        : [...prev, dropdownId]
+    );
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target) && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    // console.log('Sidebar isOpen:', isOpen);
+    if (isOpen) {
+      document.body.classList.add(styles.contentShift);
+    } else {
+      document.body.classList.remove(styles.contentShift);
+    }
+  }, [isOpen]);
+
   return (
     <>
-      <div className={styles.containerPostPage}>
+      <Sidebar
+        posts={allPostsData}
+        currentPostId={currentPostId}
+        isOpen={isOpen}
+        toggleSidebar={toggleSidebar}
+        openDropdowns={openDropdowns}
+        toggleDropdown={toggleDropdown}
+        sidebarRef={sidebarRef}
+      />
+      <div className={`${styles.containerPostPage}`}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Personal website using Next.js" />
@@ -33,15 +75,6 @@ export default function Layout({ children, home }) {
         <header className={`${styles.header} ${home ? styles.home : ""}`}>
           {home ? (
             <>
-              {/* <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={180}
-                width={180}
-                alt=""
-              />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
               <div className={styles.profileContainer}>
                 <Link href="/">
                   <Image
@@ -60,7 +93,6 @@ export default function Layout({ children, home }) {
                 </h2>
               </div>
             </>
-
           ) : (
             <>
               <div className={styles.profileContainer}>
@@ -83,20 +115,16 @@ export default function Layout({ children, home }) {
             </>
           )}
         </header>
-        <div  className={styles.containerPost}>
-        <main >{children}</main>
-        {!home && (
-
-        <>
-        <div className={styles.backToHome}>
-            <Link href="/">← Back to home</Link>
-        </div>
-        </>
-        )}
+        <div >
+          <main>{children}</main>
+          {!home && (
+            <div className={styles.backToHome}>
+              <Link href="/">← Back to home</Link>
+            </div>
+          )}
         </div>
       </div>
-      <Footer></Footer>
-
+      <Footer />
     </>
   );
 }
